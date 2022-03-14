@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/3fe635cf31.js" crossorigin="anonymous"></script>
+
+    <!-- link css  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+
+    <title>Order Now</title>
+</head>
+
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+        display: none;
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="contain flex-r">
+            <a href="/" class="nav-logo flex-r">
+                <img src="/media/logo.png" alt="">
+            </a>
+            <a class="page-btn primary-btn flex-r" href="/">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </nav>
+
+    </header>
+    <section id="order" class="order-sec contain flex-r">
+
+        <form method="post" action="/order">
+            <div class="order-wrapper">
+                <h1 class="sec-head">One Step to Go!</h1>
+                <p>
+                    IF Get Location Button Throwing a Warn Message Then
+                    <a href="https://onroadassist.in" style="text-decoration: none;"> CLICK HERE </a>
+                </p>
+                <div class="input-hold flex-r ">
+                    <div class="input-box">
+                        <input type="text" name="veh_reg_no" placeholder="Vehicle Registration No." required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="full_name" placeholder="Your Full name" required>
+                    </div>
+
+                </div>
+
+
+                <div class="input-hold flex-r">
+                    <div class="input-box">
+                        <input type="email" name="e_mail_id" placeholder="username@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="mo_no" placeholder="+91-" required>
+                    </div>
+                </div>
+                <div class="input-hold flex-r">
+                    <div class="input-box">
+                        <select id="inputState" class="form-input" name="area" required>
+                            <option selected>Select Nearest Area</option>
+                            <option value="Ashok Nager">Ashok Nager</option>
+                            <option value="mini-bypass">Mini-Bypass road</option>
+                            <option value="santhinager">Santhi Nager</option>
+                            <option value="vatluru">Vatluru</option>
+                            <option value="sanivarapata">Sanivarapata</option>
+                            <option value="satrampadu">Satrampadu</option>
+                            <option value="dmart"> D-mart</option>
+                            <option value="12 pipes center">12 pipes center</option>
+                            <option value="old bus stand">Old Bus Stand </option>
+                            <option value="new bus stand">New Bus Stand </option>
+                            <option value="Eluru Railway Station">Eluru Railway Station</option>
+                            <option value="Powerpet Railway Station">Powerpet Railway Station </option>
+                        </select>
+                    </div>
+                    {{!-- <div class="input-box">
+                        <input type="text" name="current_location" placeholder="Use My Current Loc">
+                    </div> --}}
+
+                </div>
+
+                <div class="input-hold flex-r">
+
+                    <div class="input-box">
+                        <input type="button" name="location" value="Get Location" onclick="getLocation()">
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" name="lat" placeholder="Latitude" id="showLat" />
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="lng" placeholder="Longitude" id="showLong" />
+                    </div>
+
+                    <p id="err" style="color: rgb(253, 0, 0);"> </p>
+
+                </div>
+
+                <div class="input-hold flex-r">
+                    <!--The div element for the map -->
+                    <div id="map"></div>
+
+                </div>
+
+                <div class="mini-head">
+                    <h3>We Care For You!</h3>
+                    <p>Your Data is Safe with us 😊</p>
+
+                </div>
+                <div class="input-hold flex-r">
+                    <div class="input-box">
+                        <input type="text" name="frnd_no_1" placeholder="Family Number" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="frnd_no_2" placeholder="Friend's Number">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="frnd_no_3" placeholder="Friend's Number">
+                    </div>
+                </div>
+                <div class="input-hold">
+                    <input type="submit" class="b-btn" name="order" value="Order!" />
+                </div>
+
+
+            </div>
+        </form>
+    </section>
+
+
+    <footer class="contain flex-c">
+
+        <div class="footer-top flex-r">
+            <div class="footer-link flex-c">
+                <div class="flex-r">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Eluru</span>
+                </div>
+                <div class="flex-r">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91-8897007344</span>
+                </div>
+                <div class="flex-r">
+                    <i class="fas fa-envelope"></i>
+                    <span>onroadservices@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-head flex-c">
+                <h1>OnRoad Assist</h1>
+                <p>
+                    OnRoad Assist is providing 24/7 roadside assistance
+                    support, on-spot repair, flat tyre repair, starting
+                    problem, towing, accident and emergency,
+                    call taxi and bike, fuel delivery, insurance.
+                </p>
+                <div class="social-icon flex-r">
+                    <a href="https://www.facebook.com/anandchintu.anand" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/invites/contact/?i=19ltongpjl5tg&utm_content=3n2qimp"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/onroad-assist-4625741a6" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom flex-r">
+            <span>Made with ❤️ by <a href="#">Deepak</a> </span>
+        </div>
+
+    </footer>
+
+</body>
+
+<script>
+
+    let lat, long, accurate, api_key;
+    // opencagedata
+    api_key = "2d9901e246bd4e73990560e5230ba48f";
+
+    function getLocation() {
+
+        // Check for Geolocation API permissions
+        navigator.permissions.query({ name: 'geolocation' })
+            .then(function (permissionStatus) {
+                console.log('geolocation permission state is ', permissionStatus.state);
+
+                permissionStatus.onchange = function () {
+                    console.log('geolocation permission state has changed to ', this.state);
+                };
+            });
+
+
+        if (navigator.geolocation) {
+            let location = navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        lat = position.coords.latitude;
+        long = position.coords.longitude;
+        accurate = position.coords.accuracy;
+
+        document.getElementById("showLat").value = lat;
+        document.getElementById("showLong").value = long;
+        document.getElementById("err").innerHTML = accurate;
+
+        getUserAddressBy(lat, long);
+
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                document.getElementById("err").innerHTML = "Warning : User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                document.getElementById("err").innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                document.getElementById("err").innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                document.getElementById("err").innerHTML = "An unknown error occurred."
+                break;
+        }
+
+        navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
+            if (result.state == 'granted') {
+                //showLocalNewsWithGeolocation();
+                showPosition();
+            } else if (result.state == 'prompt') {
+                //showButtonToEnableLocalNews();
+                showError();
+            }
+            // Don't do anything if the permission was denied.
+        });
+    }
+
+    function getUserAddressBy(lat, long) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var address = JSON.parse(this.responseText)
+                console.log(address.results[0].formatted_address)
+                console.log(address.results[0].components)
+                let { road, city, postcode, state, country } = address.results[0].components;
+
+                console.log(road + " " + city + " " + postcode + " " + state + " " + country)
+
+                alert(road + " " + city + " " + postcode + " " + state + " " + country);
+
+            }
+        };
+        xhttp.open("GET", "https://api.opencagedata.com/geocode/v1/json?q=" + lat + "+" + long + "&key=" + api_key + "", true);
+        xhttp.send();
+    }
+
+
+</script>
+
+
+</html>

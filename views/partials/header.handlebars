@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/3fe635cf31.js" crossorigin="anonymous"></script>
+
+    <!-- link css  -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- fav icon  -->
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+
+    <title> {{{ data.title }}} </title>
+</head>
+
+<body>
+    <!-- header section starts here  -->
+
+    {{#if data.home }}
+    <header>
+        <nav class="contain flex-r">
+            <a href="#" class="nav-logo flex-r">
+                <img src="/media/logo.png" alt="">
+            </a>
+            <div class="nav-link flex-r">
+                <a href="#">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#contact"> Reach Us</a>
+                <a class="nav-btn primary-btn flex-r" href="#service">
+                    <span>Book Now</span>
+                </a>
+            </div>
+
+            <div id="ham-btn" class="ham  flex-c">
+                <span class="line" id="line-1"></span>
+                <span class="line" id="line-2"></span>
+                <span class="line" id="line-3"></span>
+            </div>
+        </nav>
+
+        <main class="contain flex-r">
+            <div class="main-text flex-c">
+                <h1 class="main-head">OnRoad Assist</h1>
+                <p>24/7 OnRoad Assist Provide Quality and Quantity</p>
+                <p>Ride free we are with you anywhere anytime</p>
+                <a class="primary-btn"
+                    href="https://api.whatsapp.com/send?phone=919491976618&text=Hey!%20I%20Need%20Help">Whatsapp Us</a>
+            </div>
+        </main>
+    </header>
+
+    <!-- header section ends here  -->
+
+    {{else}}
+
+    <header>
+        <nav class="contain flex-r">
+            <a href="/" class="nav-logo flex-r">
+                <img src="/media/logo.png" alt="">
+            </a>
+            <a class="page-btn primary-btn flex-r" href="/">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </nav>
+        <div class="hero flex-r">
+            <h1 class="main-head"> {{{ data.title }}} </h1>
+        </div>
+    </header>
+
+    {{/if}}
