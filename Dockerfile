@@ -2,7 +2,7 @@
 
 FROM alpine:latest
 # To Change Working Directory
-WORKDIR /onroadassist.in
+WORKDIR /app/onroadassist.in
 
 #To Update OS and Packeg And install Node Js
 RUN apk update && apk add --no-cache nodejs && apk add --no-cache npm
