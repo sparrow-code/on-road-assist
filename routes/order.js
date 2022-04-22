@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 
 
 const { postOrder } = require("../controller/order.js");
-const { postContact } = require("../controller/contact.js");
 
 // parse application/x-www-form-urlencoded
 router.use('/', bodyParser.urlencoded({ extended: false }))

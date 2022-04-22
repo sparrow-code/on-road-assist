@@ -1,3 +1,4 @@
+/* 
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -24,3 +25,4 @@ transporter.verify(function (error, success) {
 module.exports = {
     transporter
 }
+ */
