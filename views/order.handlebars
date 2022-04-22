@@ -121,7 +121,7 @@
                 </div>
                 <div class="input-hold flex-r">
                     <div class="input-box">
-                        <input type="text" name="frnd_no_1" placeholder="Family Number" required>
+                        <input type="text" name="family_no_1" placeholder="Family Number" required>
                     </div>
                     <div class="input-box">
                         <input type="text" name="frnd_no_2" placeholder="Friend's Number">
@@ -264,10 +264,6 @@
                 console.log(address.results[0].formatted_address)
                 console.log(address.results[0].components)
                 let { road, city, postcode, state, country } = address.results[0].components;
-
-                console.log(road + " " + city + " " + postcode + " " + state + " " + country)
-
-                alert(road + " " + city + " " + postcode + " " + state + " " + country);
 
             }
         };
