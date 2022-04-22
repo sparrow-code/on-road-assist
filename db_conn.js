@@ -4,11 +4,11 @@ var mysql = require('mysql');
 
 var util = require('util');
 
-var db_host = process.env.DB_HOST || "sg2plzcpnl490050.prod.sin2.secureserver.net",
-  db_user = process.env.DB_USER || "onroadassist",
-  db_password = process.env.DB_PASSWORD || "Onroadassist@123",
-  db_port = process.env.DB_PORT || "3306",
-  db_name = process.env.DB_name || "onroadassist";
+var db_host = process.env.DB_HOST ,
+  db_user = process.env.DB_USER ,
+  db_password = process.env.DB_PASSWORD ,
+  db_port = process.env.DB_PORT ,
+  db_name = process.env.DB_name ;
 
 var pool = mysql.createPool({
   host: db_host,
