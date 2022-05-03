@@ -34,6 +34,7 @@ To Get Information About Specific ID
 
 #### Publish Data
 To Submit Data Using API
+In Post Body Request
 
 ```http
    POST /api/order/
