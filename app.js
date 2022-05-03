@@ -28,6 +28,16 @@ var send_msg = require('./routes/send_msg.js');
 app.use('/order', order);
 app.use('/send_msg', send_msg);
 
+
+// Api Router
+var apiOrder = require("./api/order.js");
+var apiSendMsg = require("./api/snd_msg.js");
+
+
+app.use("/api/order", apiOrder );
+app.use("/api/sendMsg", apiSendMsg);
+
+
 app.get('/', (req, res) => {
     var send_data = {
         title: "OnRoad Assist",
