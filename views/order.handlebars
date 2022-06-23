@@ -265,6 +265,10 @@
                 console.log(address.results[0].components)
                 let { road, city, postcode, state, country } = address.results[0].components;
 
+                console.log(road + " " + city + " " + postcode + " " + state + " " + country)
+
+                alert(road + " " + city + " " + postcode + " " + state + " " + country);
+
             }
         };
         xhttp.open("GET", "https://api.opencagedata.com/geocode/v1/json?q=" + lat + "+" + long + "&key=" + api_key + "", true);

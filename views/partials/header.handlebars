@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+
+{{!-- Login --}}
+{{#if data.login }}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> {{{ data.title }}} </title>
+  <link rel="stylesheet" href="/css/login.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+{{!-- Log Out --}}
+{{else}}
 <html lang="en">
 
 <head>
@@ -53,7 +73,8 @@
                 <p>24/7 OnRoad Assist Provide Quality and Quantity</p>
                 <p>Ride free we are with you anywhere anytime</p>
                 <a class="primary-btn"
-                    href="https://api.whatsapp.com/send?phone=918897007344&text=Hey!%20I%20Need%20Help%20it%20is%20emergency">Whatsapp Us</a>
+                    href="https://api.whatsapp.com/send?phone=918897007344&text=Hey!%20I%20Need%20Help%20it%20is%20emergency">Whatsapp
+                    Us</a>
             </div>
         </main>
     </header>
@@ -78,3 +99,6 @@
     </header>
 
     {{/if}}
+
+
+{{/if}}

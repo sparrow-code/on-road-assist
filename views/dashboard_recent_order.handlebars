@@ -1,0 +1,80 @@
+{{!-- Header --}}
+{{> header }}
+
+{{!-- SideBar --}}
+{{> loginsidebar }}
+
+
+<section class="home-section">
+    <nav>
+        <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Dashboard</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search'></i>
+        </div>
+        <div class="profile-details">
+            <img src="images/profile.jpg" alt="">
+            <span class="admin_name"> {{{ data.user_name }}} </span>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </nav>
+
+    <div class="home-content">
+
+
+        <div class="sales-boxes">
+            <div class="recent-sales box" style="width: 96%; overflow-x: auto;">
+                <div class="title">Recent Order</div>
+
+                <table style="border-spacing: 15px; overflow-x: auto;">
+                    <thead class="details">
+                        <tr>
+                            <th class="topic">Full Name</th>
+                            <th class="topic">Vehical Registration Number</th>
+                            <th class="topic">E-Mail</th>
+                            <th class="topic">Mobile Number</th>
+                            <th class="topic">Near Area </th>
+                            <th class="topic">Latitude </th>
+                            <th class="topic">Longitude </th>
+                            <th class="topic">Family Number </th>
+                            <th class="topic">Friend's Number </th>
+                            <th class="topic">Friend's Number </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each messages}}
+                        <tr>
+                            <td>{{{ full_name }}}</td>
+                            <td>{{{ vehical_registration_number }}}</td>
+                            <td>{{{ e_mail }}}</td>
+                            <td>{{{ mob_num }}}</td>
+                            <td>{{{ near_area }}}</td>
+                            <td>{{{ latitude }}}</td>
+                            <td>{{{ longitude }}}</td>
+                            <td>{{{ family_number }}}</td>
+                            <td>{{{ first_frnd_num }}}</td>
+                            <td>{{{ sec_frnd_num }}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+
+                {{!-- <div class="button">
+                    <a href="#">See All</a>
+                </div> --}}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{{!-- Footer --}}
+{{> footer }}
